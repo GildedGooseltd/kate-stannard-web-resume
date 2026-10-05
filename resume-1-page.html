@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kate Stannard · 1 Page Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    @page { margin: 0.45in; size: letter; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 10pt/1.2 Rockwell, "Rockwell Nova", "Roboto Slab", Georgia, serif;
+      color: #1a1518;
+      background: #fff;
+    }
+    .page {
+      width: 100%;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.45in;
+      box-sizing: border-box;
+    }
+    h1 {
+      font-size: 16pt;
+      letter-spacing: -0.03em;
+      margin: 0 0 0.15rem;
+      line-height: 1.05;
+    }
+    .contact { font-size: 10pt; color: #444; margin-bottom: 0.45rem; }
+    .contact a { color: #444; text-decoration: none; }
+    .summary {
+      font-size: 10pt;
+      margin: 0 0 0.45rem;
+      color: #222;
+      text-wrap: pretty;
+    }
+    h2 {
+      font-size: 10pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 1.25px solid #1a1518;
+      margin: 0.65rem 0 0.35rem;
+      padding-bottom: 0.14rem;
+    }
+    h2:first-of-type { margin-top: 0.2rem; }
+    .job { margin-bottom: 0.22rem; }
+    .job-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) max-content;
+      column-gap: 0.65rem;
+      align-items: baseline;
+      font-weight: 700;
+      font-size: 10pt;
+      line-height: 1.2;
+    }
+    .job-title {
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .job-dates {
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .job-loc {
+      font-weight: 400;
+      color: #444;
+    }
+    .role-blurb {
+      margin: 0.1rem 0 0;
+      font-size: 10pt;
+      line-height: 1.2;
+      color: #222;
+      text-wrap: pretty;
+    }
+    .job ul { margin: 0.08rem 0 0; padding-left: 1rem; }
+    .job li {
+      margin-bottom: 0.05rem;
+      font-size: 10pt;
+      line-height: 1.2;
+      text-wrap: pretty;
+    }
+    .delta {
+      font-family: Rockwell, "Rockwell Nova", "Roboto Slab", Georgia, serif;
+      font-size: 10pt;
+      line-height: 1;
+    }
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.1rem;
+      font-size: 10pt;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.1rem;
+      align-items: center;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.55rem 0.45in 0.1rem;
+      font: 10pt/1.3 Rockwell, "Rockwell Nova", "Roboto Slab", Georgia, serif;
+    }
+    .toolbar button,
+    .toolbar a {
+      font: inherit;
+      font-weight: 600;
+      color: #1e3a5f;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 0.12em;
+    }
+    @media print {
+      .toolbar { display: none !important; }
+      .page { padding: 0; max-width: none; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar" aria-label="Resume actions">
+    <button type="button" onclick="window.print()">Print</button>
+    <a href="Kate-Stannard-Resume-1-page.pdf" download>Download PDF</a>
+  </div>
+  <div class="page">
+    <h1>Kate Stannard</h1>
+    <p class="summary" style="margin:0.15rem 0 0.25rem;font-weight:600;color:#1e3a5f">Marketing Technology &amp; Operations · Systems Admin &amp; Integration Design · Data Management &amp; Attribution</p>
+    <div class="contact">
+      <a href="mailto:stannard.ks@gmail.com">stannard.ks@gmail.com</a> ·
+      <a href="https://www.linkedin.com/in/ksstannard/">linkedin.com/in/ksstannard</a> ·
+      720-701-2646
+    </div>
+
+    <p class="summary">
+      Senior Marketing Technology and Marketing Operations leader with experience from enterprise corporations to growth stage companies. Owns CRM, lifecycle systems, integrations, attribution, and vendor selection so acquisition and lifecycle stay measurable, privacy-aware, and ready to iterate. Uses AI to expand skills and accelerate implementation, not as a substitute for creativity, experience, or critical thought.
+    </p>
+
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="job-title">Gilded Goose Limited · Principal <span class="job-loc">· Denver, CO · Remote</span></span>
+        <span class="job-dates">Apr 2024 – Present</span>
+      </div>
+      <p class="role-blurb">Business operations and marketing technology consulting for small shops looking to grow revenue and operate more efficiently. Simplify tech infrastructure management so founders can focus on their specialties.</p>
+      <ul>
+        <li>Recent client successes: new cases <span class="delta">↑</span> ~87% YoY; lead volume more than doubled; Search cost per call <span class="delta">↓</span> ~61%</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="job-title">Salesforce · Research &amp; Insights, Sr Tech Operations Manager <span class="job-loc">· Denver, CO · Remote</span></span>
+        <span class="job-dates">May 2021 – Apr 2024</span>
+      </div>
+      <p class="role-blurb">Owned the tech and tools roadmap across systems, vendors, licensing, and budgets, leading a cross-specialty team of 7.</p>
+      <ul>
+        <li>Selected and stood up the systems, integrations, vendors, licensing, budgets, and project tools the team needed</li>
+        <li>Designed Salesforce CRM and ClickUp; led the Scrum team that built the integration for case intake, automated case satisfaction surveys, and clearer reporting so the PM tool and CRM could talk</li>
+        <li>Built the Research Library and Vendor Scorecard on Salesforce CRM and Heroku, with Dropbox in the stack; cleaner asset data and automated scoring sped up funding decisions</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="job-title">Salesforce · Sr. Integrations Program Manager <span class="job-loc">· San Francisco, CA</span></span>
+        <span class="job-dates">May 2019 – May 2021</span>
+      </div>
+      <p class="role-blurb">Led a team of 3 in Marketing Operations across campaign integrations, campaign operations, and knowledge management, covering training, UX, data quality, object governance, and reporting.</p>
+      <ul>
+        <li>Designed a multi-pronged Universal Content ID integration, creating a shared data ecosystem and taxonomy across Kapost, Mavenlink, Salesforce CRM, HighSpot, Widen, SmartLogic, SMARP, VidYard, Salesforce Marketing Cloud, Allocadia, WordPress, and Google Analytics, cutting production cost, improving UX, tracking the customer’s digital content journey, and making content ROI measurable across tools</li>
+        <li>Mentored the team and kept a roadmap so integrations lined up with the org V2MOM</li>
+        <li>Expanded the Marketing Resource Site to enable 500+ stakeholders across 10+ departments, avg. 588 monthly users</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="job-title">Salesforce · Marketing Campaign Operations Manager <span class="job-loc">· San Francisco, CA</span></span>
+        <span class="job-dates">Feb 2018 – May 2019</span>
+      </div>
+      <p class="role-blurb">Worked with 40+ campaign strategy directors and team stakeholders across all global regions. Standardized UX, data governance, and the annual reporting hierarchy so shared reports stayed consistent.</p>
+      <ul>
+        <li>Designed and project-managed an automated Global Campaign Audit that prepopulated records, automated workflows, and flagged corrections for hundreds of stakeholders, saving thousands of hours; year one recovered $1.3B in Marketing Pipe attribution and cut manual data-entry errors ~70%, ~$45M/qt</li>
+        <li>Grew enablement into the Marketing Resource Site and self-service training; adoption: users +88.9% YoY and unique pageviews +68.5% YoY; cut new-hire onboarding and training from months to weeks</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="job-title">90octane · Marketing Automation Manager <span class="job-loc">· Denver, CO</span></span>
+        <span class="job-dates">Jan 2017 – Feb 2018</span>
+      </div>
+      <p class="role-blurb">Agency marketing automation for midsize to enterprise clients across credit cards, banking, real estate, builders, and software. Scope shifted by account, from basic tech support through systems administration and setup.</p>
+      <ul>
+        <li>Evaluated tools and contributed technical design for integrations</li>
+        <li>Administered Eloqua, Marketo, and Pardot with CRM scoring, nurture, and data governance, including customized lead scoring, nurture journeys, and consistent list and field handoffs</li>
+        <li>Planned how programs would scale and mapped systems transition paths when accounts moved platforms</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="job-title">Global Healthcare Exchange · Digital Marketing Analyst <span class="job-loc">· Denver, CO</span></span>
+        <span class="job-dates">Jun 2015 – Dec 2016</span>
+      </div>
+      <p class="role-blurb">Owned the marketing automation system, led the platform migration, and launched employee social media.</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="job-title">Return Path · Eloqua Marketing Automation Specialist <span class="job-loc">· Denver, CO</span></span>
+        <span class="job-dates">Mar 2014 – May 2015</span>
+      </div>
+      <p class="role-blurb">Jr. Systems Admin for Eloqua, supporting field, digital, and channel marketers on email and nurture.</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="job-title">Veeam Software · Internet &amp; Email Marketing Specialist <span class="job-loc">· Atlanta, GA</span></span>
+        <span class="job-dates">Jan 2013 – Feb 2014</span>
+      </div>
+      <p class="role-blurb">Owned Veeam MarketReach, an in-house Partner Marketing automation tool for channel and Partner email.</p>
+    </div>
+
+    <h2>Education</h2>
+    <div class="edu-row">
+      <span>University of Colorado Boulder · Master of Engineering Management</span>
+      <span>Aug 2015 – Apr 2021</span>
+    </div>
+    <div class="edu-row">
+      <span>University of Central Florida · B.S. Marketing with a Services Marketing Certificate</span>
+      <span>Aug 2011 – Dec 2012</span>
+    </div>
+  </div>
+</body>
+</html>
