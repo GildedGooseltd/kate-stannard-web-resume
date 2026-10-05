@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DUI signed goal — edit inputs</title>
+  <style>
+    :root {
+      --gg-cream: #f8f5ef;
+      --gg-paper: #fffcf7;
+      --gg-brown: #3d3028;
+      --gg-muted: #5c4f45;
+      --gg-royal: #3a1a6e;
+      --gg-royal-deep: #2d1454;
+      --gg-gold: #b8860b;
+      --gg-border: rgba(45, 20, 84, 0.22);
+      --gg-positive: #2d5a3d;
+      --gg-negative: #cf2d56;
+      --font: Georgia, "Times New Roman", Times, serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: var(--gg-cream);
+      color: var(--gg-brown);
+      line-height: 1.5;
+      padding: 1.5rem;
+    }
+    .wrap { max-width: 52rem; margin: 0 auto; }
+    h1 {
+      margin: 0 0 0.35rem;
+      color: var(--gg-royal-deep);
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+    }
+    .sub { color: var(--gg-muted); margin: 0 0 1.25rem; font-weight: 600; }
+    .card {
+      background: var(--gg-paper);
+      border: 1px solid var(--gg-border);
+      border-left: 5px solid var(--gg-gold);
+      border-radius: 14px;
+      padding: 1rem 1.15rem 1.2rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 8px 22px rgba(61, 48, 40, 0.06);
+    }
+    .card h2 {
+      margin: 0 0 0.65rem;
+      color: var(--gg-royal);
+      font-size: 1.15rem;
+    }
+    label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--gg-royal);
+      margin: 0.65rem 0 0.25rem;
+    }
+    input, textarea {
+      width: 100%;
+      font: inherit;
+      font-size: 1rem;
+      padding: 0.55rem 0.65rem;
+      border: 1px solid var(--gg-border);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--gg-brown);
+    }
+    textarea { min-height: 5.5rem; resize: vertical; }
+    .row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+    @media (max-width: 700px) { .row { grid-template-columns: 1fr; } }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 1rem;
+    }
+    button, .btn {
+      font: inherit;
+      font-weight: 800;
+      padding: 0.55rem 0.95rem;
+      border-radius: 10px;
+      border: 2px solid var(--gg-royal-deep);
+      background: var(--gg-royal-deep);
+      color: #fff;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    button.secondary, .btn.secondary {
+      background: var(--gg-paper);
+      color: var(--gg-royal);
+    }
+    button:hover, .btn:hover { filter: brightness(1.05); }
+    .preview-metric {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gg-royal-deep);
+      line-height: 1.1;
+    }
+    .preview-metric small { font-size: 1rem; color: var(--gg-muted); }
+    .status { font-size: 0.9rem; font-weight: 700; margin-top: 0.5rem; }
+    .status.ok { color: var(--gg-positive); }
+    .status.warn { color: var(--gg-negative); }
+    .hint { font-size: 0.88rem; color: var(--gg-muted); margin: 0.35rem 0 0; }
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.8rem;
+    }
+    pre {
+      background: #f3ede4;
+      border-radius: 8px;
+      padding: 0.75rem;
+      overflow: auto;
+      white-space: pre-wrap;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th, td { text-align: left; padding: 0.35rem 0.4rem; border-bottom: 1px solid rgba(61,48,40,0.1); }
+    th { color: var(--gg-royal); font-weight: 800; }
+    a { color: var(--gg-royal); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>DUI signed goal</h1>
+    <p class="sub">Edit inputs for the Team goals tile. Values save locally and can be copied into <code>dui-goal-data.js</code> for the live cockpit.</p>
+
+    <div class="card">
+      <h2>Preview</h2>
+      <div class="preview-metric" id="preview-title"># DUIs Signed 2026</div>
+      <div class="preview-metric" id="preview-val">18 <small>/ 50</small></div>
+      <p class="status" id="preview-status"></p>
+      <p class="hint"><a href="index.html">← Back to Operations Dashboard</a></p>
+    </div>
+
+    <div class="card">
+      <h2>Inputs</h2>
+      <div class="row">
+        <div>
+          <label for="year">Year</label>
+          <input id="year" type="number" min="2024" max="2035" />
+        </div>
+        <div>
+          <label for="current">Current signed</label>
+          <input id="current" type="number" min="0" step="1" />
+        </div>
+        <div>
+          <label for="target">Goal target</label>
+          <input id="target" type="number" min="1" step="1" />
+        </div>
+      </div>
+      <label for="title">Title</label>
+      <input id="title" type="text" />
+      <label for="label">Bar label</label>
+      <input id="label" type="text" />
+      <label for="definition">How to count (definition)</label>
+      <textarea id="definition"></textarea>
+      <label for="sourceFile">Source file</label>
+      <input id="sourceFile" type="text" />
+      <label for="exportStrictCount">Export strict count (reference)</label>
+      <input id="exportStrictCount" type="number" min="0" step="1" />
+      <label for="exportNote">Export note</label>
+      <textarea id="exportNote"></textarea>
+      <label for="notes">Kate notes</label>
+      <textarea id="notes"></textarea>
+      <div class="actions">
+        <button type="button" id="btn-save">Save locally</button>
+        <button type="button" class="secondary" id="btn-download">Download dui-goal-data.js</button>
+        <button type="button" class="secondary" id="btn-reset">Reset to file defaults</button>
+        <button type="button" class="secondary" id="btn-use-export">Use export count as current</button>
+      </div>
+      <p class="hint" id="save-msg"></p>
+    </div>
+
+    <div class="card">
+      <h2>Data found (MyCase contact export)</h2>
+      <p class="hint">File: <code>Ad Reports/exports/mycase/as-of-2026-07-25/Contact_07-25-2026.csv</code> · last updated 2026-07-25</p>
+      <p class="hint">Reference extract: <code>dui-signed-2026-from-contact-export.csv</code> (strict Case Type only = 8 for 2026).</p>
+      <table>
+        <thead><tr><th>Match rule</th><th>2026 count</th></tr></thead>
+        <tbody>
+          <tr><td>Case Type = DUI / DWAI / Alcohol / DUI Pre-file</td><td>8</td></tr>
+          <tr><td>Dashboard / feeByPractice YTD (current override)</td><td>18</td></tr>
+          <tr><td>Goal target</td><td>50</td></tr>
+        </tbody>
+      </table>
+      <p class="hint">To raise confidence: pull a MyCase case report with Created date + Practice area + Case Type for opened/signed matters only (one row per case, not contacts).</p>
+    </div>
+
+    <div class="card">
+      <h2>Generated file contents</h2>
+      <pre id="js-out"></pre>
+    </div>
+  </div>
+
+  <script src="dui-goal-data.js"></script>
+  <script>
+    const KEY = "pav-dui-goal-data-v1";
+    const defaults = () => JSON.parse(JSON.stringify(window.DUI_GOAL_DATA || {
+      year: 2026, current: 18, target: 50, label: "Signed", title: "# DUIs Signed",
+      definition: "", sourceFile: "", exportStrictCount: 8, exportNote: "", notes: "", updatedAt: ""
+    }));
+
+    const fields = ["year","current","target","title","label","definition","sourceFile","exportStrictCount","exportNote","notes"];
+
+    function readForm() {
+      const d = defaults();
+      d.year = Number(document.getElementById("year").value) || d.year;
+      d.current = Number(document.getElementById("current").value) || 0;
+      d.target = Number(document.getElementById("target").value) || 1;
+      d.title = document.getElementById("title").value.trim() || d.title;
+      d.label = document.getElementById("label").value.trim() || d.label;
+      d.definition = document.getElementById("definition").value.trim();
+      d.sourceFile = document.getElementById("sourceFile").value.trim();
+      d.exportStrictCount = Number(document.getElementById("exportStrictCount").value) || 0;
+      d.exportNote = document.getElementById("exportNote").value.trim();
+      d.notes = document.getElementById("notes").value.trim();
+      d.updatedAt = new Date().toISOString().slice(0, 10);
+      return d;
+    }
+
+    function fillForm(d) {
+      fields.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = d[id] != null ? d[id] : "";
+      });
+      render(d);
+    }
+
+    function toJsFile(d) {
+      return `/**\n * Editable DUI signed goal — loaded by index.html before kpi-report.js.\n * Edit via dui-goal.html (or change values here and hard-refresh).\n */\nwindow.DUI_GOAL_DATA = ${JSON.stringify(d, null, 2)};\n`;
+    }
+
+    function render(d) {
+      document.getElementById("preview-title").textContent = `${d.title} ${d.year}`;
+      document.getElementById("preview-val").innerHTML = `${d.current} <small>/ ${d.target}</small>`;
+      const st = document.getElementById("preview-status");
+      if (d.current >= d.target) {
+        st.className = "status ok";
+        st.textContent = "Target reached";
+      } else {
+        st.className = "status warn";
+        st.textContent = `${d.target - d.current} remaining to goal`;
+      }
+      document.getElementById("js-out").textContent = toJsFile(d);
+    }
+
+    function load() {
+      let d = defaults();
+      try {
+        const saved = localStorage.getItem(KEY);
+        if (saved) d = { ...d, ...JSON.parse(saved) };
+      } catch (e) {}
+      fillForm(d);
+    }
+
+    document.getElementById("btn-save").addEventListener("click", () => {
+      const d = readForm();
+      localStorage.setItem(KEY, JSON.stringify(d));
+      render(d);
+      document.getElementById("save-msg").textContent = "Saved in this browser. Download dui-goal-data.js and replace the file in project-picker to update the dashboard.";
+    });
+
+    document.getElementById("btn-download").addEventListener("click", () => {
+      const d = readForm();
+      const blob = new Blob([toJsFile(d)], { type: "text/javascript;charset=utf-8" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "dui-goal-data.js";
+      a.click();
+      URL.revokeObjectURL(a.href);
+      document.getElementById("save-msg").textContent = "Downloaded. Replace gilded-goose/clients/portfolio/gilbert-guide-sample/dui-goal-data.js then hard-refresh the dashboard.";
+    });
+
+    document.getElementById("btn-reset").addEventListener("click", () => {
+      localStorage.removeItem(KEY);
+      fillForm(defaults());
+      document.getElementById("save-msg").textContent = "Reset to dui-goal-data.js defaults.";
+    });
+
+    document.getElementById("btn-use-export").addEventListener("click", () => {
+      const n = Number(document.getElementById("exportStrictCount").value) || 0;
+      document.getElementById("current").value = String(n);
+      render(readForm());
+      document.getElementById("save-msg").textContent = `Current set to export strict count (${n}). Save / download when ready.`;
+    });
+
+    fields.forEach(id => {
+      document.getElementById(id)?.addEventListener("input", () => render(readForm()));
+    });
+
+    load();
+  </script>
+</body>
+</html>

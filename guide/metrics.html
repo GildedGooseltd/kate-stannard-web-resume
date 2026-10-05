@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sample Firm — Metrics</title>
+  <link rel="stylesheet" href="metrics.css?v=20260910-split-legible">
+</head>
+<body class="metrics-page">
+  <header class="metrics-header">
+    <div class="metrics-header-inner">
+      <div>
+        <a class="metrics-back" href="index.html">← Back to project guide</a>
+        <h1>Metrics &amp; charts</h1>
+        <p class="metrics-header-sub">Key metrics and charts from the latest Ad Reports export.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="metrics-main metrics-main-solo">
+    <div class="metrics-report-stack">
+      <div class="kpi-report-root" id="kpi-report-kpis" aria-label="KPI metrics and charts"></div>
+    </div>
+  </div>
+
+  <script src="pages-config.js?v=20260717-qb-deposit"></script>
+  <script src="config.js" onerror="/* local override optional */"></script>
+  <script src="projects-data.js?v=20260727-hubspot-casey-r1"></script>
+  <script src="dui-goal-data.js?v=20260724-auto-stack-r1"></script>
+  <script src="kpi-report.js?v=20261002-digitalgoals"></script>
+  <script>window.KPI_REPORT.renderKpis(document.getElementById("kpi-report-kpis"));</script>
+</body>
+</html>
