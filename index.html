@@ -59,6 +59,25 @@
   line-height: 1.4;
   color: #A3B8A8;
 }
+#works .works-lp-row {
+  position: relative;
+}
+#works .works-lp-row .works-lp-btn { padding-right: 2.2rem; }
+#works .works-lp-out {
+  position: absolute;
+  top: 1.05rem;
+  right: 0.95rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  color: #A3B8A8;
+  z-index: 2;
+}
+#works .works-lp-out:hover { color: #F4F1EB; }
+#works .works-lp-out svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 #works .works-lp-preview {
   border: 1px solid #1A3326;
   border-radius: 2px;
@@ -151,9 +170,23 @@
   white-space: nowrap;
 }
 .print-resume-menu a:hover { color: #F4F1EB; }
+#resume .resume-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+#resume .resume-dl { z-index: 25; }
+#resume .resume-dl > summary {
+  border: 1px solid #A3B8A8;
+  color: #F4F1EB;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.65rem;
+}
+#resume .resume-dl > summary:hover { border-color: #F4F1EB; }
 
 #resume { background:#0B1C14; border-top:1px solid #1A3326; }
-#resume .resume-inner { max-width: 48rem; margin: 0 auto; padding: 5rem 1.5rem 6.5rem; }
+#resume .resume-inner { max-width: 70rem; margin: 0 auto; padding: 5rem 1.5rem 6.5rem; }
 @media (min-width: 768px) {
   #resume .resume-inner { padding: 7rem 3rem 8rem; }
 }
@@ -199,9 +232,12 @@
 }
 #resume .resume-copy .tools p { margin: 0 0 0.35rem; color: #A3B8A8; }
 #resume .resume-copy .job { margin-bottom: 1.85rem; }
-#resume .resume-copy .job-head { display:flex; justify-content:space-between; gap: 0.75rem; font-weight:600; flex-wrap:wrap; color: #F4F1EB; font-size: 1.05rem; line-height: 1.35; }
+#resume .resume-copy .job-head { display:flex; justify-content:space-between; align-items:baseline; gap: 1rem; font-weight:600; flex-wrap:wrap; color: #F4F1EB; font-size: 1.05rem; line-height: 1.35; }
 #resume .resume-copy .job-loc { font-weight: 400; color: #A3B8A8; }
-#resume .resume-copy .job-dates { font-weight: 400; color: #A3B8A8; font-size: 0.92rem; }
+#resume .resume-copy .job-dates { font-weight: 400; color: #A3B8A8; font-size: 0.92rem; white-space: nowrap; flex: 0 0 auto; }
+@media (min-width: 900px) {
+  #resume .resume-copy .job-head { flex-wrap: nowrap; }
+}
 #resume .resume-copy .role-blurb { margin: 0.4rem 0 0.45rem; color: #A3B8A8; }
 #resume .resume-copy ul { margin: 0.15rem 0 0; padding-left: 1.15rem; list-style: disc; }
 #resume .resume-copy ul ul { list-style: circle; margin-top: 0.25rem; }
@@ -234,14 +270,19 @@ Career High<em class="not-italic text-[#A3B8A8]">lights</em> </h2> </div> </div>
     </button>
     <button type="button" class="works-lp-btn" role="option" aria-selected="false" data-works-i="1" data-cursor="explore">
       <span class="works-lp-kind">MarTech: Attribution</span>
-      <span class="works-lp-title">1.3 Billion Recovered</span>
+      <span class="works-lp-title">Automating Campaign Creation &amp; Audit</span>
       <span class="works-lp-stats">$1.3B recovered · ~70% fewer errors · ~$45M/qt</span>
     </button>
+    <div class="works-lp-row">
     <button type="button" class="works-lp-btn" role="option" aria-selected="false" data-works-i="2" data-cursor="explore">
       <span class="works-lp-kind">Training</span>
-      <span class="works-lp-title">Presenter at Industry Conference</span>
+      <span class="works-lp-title">LevelUp Presenter for ClickUp &amp; Salesforce</span>
       <span class="works-lp-stats">How to identify process improvements for your team and tech</span>
     </button>
+    <a class="works-lp-out" href="levelup.html" target="_blank" rel="noopener" aria-label="Watch the LevelUp talk on YouTube">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5h5v5"/><path d="M20 5L10 15"/><path d="M11 5H6a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5"/></svg>
+    </a>
+    </div>
   </div>
   <div class="works-lp-preview" id="works-lp-preview" aria-live="polite">
     <div class="work-photo work-photo--dash">
@@ -253,21 +294,29 @@ Career High<em class="not-italic text-[#A3B8A8]">lights</em> </h2> </div> </div>
     <a class="works-lp-link" id="works-lp-link" href="#works">View detail</a>
   </div>
 </div>
-</section> <section id="manifesto" class="relative bg-[#0B1C14] py-24 md:py-40 overflow-hidden"> <div class="tool-cloud" aria-hidden="true">
-<svg class="tool-cloud-net" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none"><line x1="7" y1="8" x2="20" y2="5"/><line x1="7" y1="8" x2="10" y2="14"/><line x1="20" y1="5" x2="18" y2="18"/><line x1="20" y1="5" x2="24" y2="12"/><line x1="38" y1="7" x2="34" y2="9"/><line x1="38" y1="7" x2="48" y2="4"/><line x1="62" y1="6" x2="66" y2="10"/><line x1="62" y1="6" x2="48" y2="4"/><line x1="80" y1="8" x2="76" y2="14"/><line x1="80" y1="8" x2="86" y2="10"/><line x1="93" y1="12" x2="84" y2="17"/><line x1="93" y1="12" x2="95" y2="26"/><line x1="93" y1="12" x2="86" y2="10"/><line x1="5" y1="22" x2="18" y2="18"/><line x1="5" y1="22" x2="10" y2="14"/><line x1="18" y1="18" x2="24" y2="12"/><line x1="18" y1="18" x2="22" y2="28"/><line x1="18" y1="18" x2="10" y2="14"/><line x1="84" y1="17" x2="76" y2="14"/><line x1="84" y1="17" x2="78" y2="30"/><line x1="84" y1="17" x2="86" y2="10"/><line x1="95" y1="26" x2="88" y2="36"/><line x1="4" y1="38" x2="14" y2="34"/><line x1="4" y1="38" x2="8" y2="46"/><line x1="14" y1="34" x2="22" y2="28"/><line x1="88" y1="36" x2="96" y2="44"/><line x1="88" y1="36" x2="78" y2="30"/><line x1="96" y1="44" x2="92" y2="48"/><line x1="5" y1="54" x2="12" y2="62"/><line x1="5" y1="54" x2="8" y2="46"/><line x1="12" y1="62" x2="7" y2="74"/><line x1="90" y1="56" x2="96" y2="64"/><line x1="90" y1="56" x2="92" y2="48"/><line x1="96" y1="64" x2="94" y2="76"/><line x1="7" y1="74" x2="16" y2="82"/><line x1="16" y1="82" x2="26" y2="78"/><line x1="28" y1="90" x2="26" y2="78"/><line x1="28" y1="90" x2="32" y2="86"/><line x1="50" y1="88" x2="32" y2="86"/><line x1="50" y1="88" x2="68" y2="85"/><line x1="72" y1="90" x2="74" y2="76"/><line x1="72" y1="90" x2="68" y2="85"/><line x1="86" y1="80" x2="94" y2="76"/><line x1="86" y1="80" x2="74" y2="76"/><line x1="24" y1="12" x2="34" y2="9"/><line x1="76" y1="14" x2="66" y2="10"/><line x1="26" y1="78" x2="32" y2="86"/><line x1="74" y1="76" x2="68" y2="85"/></svg>
-<div class="tool-cloud-nodes"><span class="tool-cloud-node" style="left:50.0%;top:5.5%;--s:48px;--d:0.0s;--dx:2px;--dy:3px;--dur:18s"><img src="assets/tool-icons/hubspot.svg?v=c3" alt="" width="48" height="48"></span><span class="tool-cloud-node" style="left:59.4%;top:5.5%;--s:56px;--d:0.38s;--dx:3px;--dy:4px;--dur:20s"><img src="assets/tool-icons/clickup.svg?v=c3" alt="" width="56" height="56"></span><span class="tool-cloud-node" style="left:68.4%;top:5.6%;--s:44px;--d:0.76s;--dx:4px;--dy:2px;--dur:22s"><img src="assets/tool-icons/marketo.svg?v=c3" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:76.7%;top:9.9%;--s:52px;--d:1.14s;--dx:2px;--dy:3px;--dur:24s"><img src="assets/tool-icons/pardot.svg?v=c3" alt="" width="52" height="52"></span><span class="tool-cloud-node" style="left:83.9%;top:15.8%;--s:46px;--d:1.52s;--dx:3px;--dy:4px;--dur:18s"><img src="assets/tool-icons/eloqua.png?v=c3" alt="" width="46" height="46"></span><span class="tool-cloud-node" style="left:89.9%;top:22.9%;--s:54px;--d:1.9s;--dx:4px;--dy:2px;--dur:20s"><img src="assets/tool-icons/googleanalytics.svg?v=c3" alt="" width="54" height="54"></span><span class="tool-cloud-node" style="left:94.3%;top:31.0%;--s:48px;--d:2.28s;--dx:2px;--dy:3px;--dur:22s"><img src="assets/tool-icons/googleads.svg?v=c3" alt="" width="48" height="48"></span><span class="tool-cloud-node" style="left:95.2%;top:39.8%;--s:56px;--d:2.66s;--dx:3px;--dy:4px;--dur:24s"><img src="assets/tool-icons/meta.svg?v=c3" alt="" width="56" height="56"></span><span class="tool-cloud-node" style="left:95.2%;top:49.0%;--s:44px;--d:3.04s;--dx:4px;--dy:2px;--dur:18s"><img src="assets/tool-icons/microsoftads.png?v=c3" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:95.2%;top:58.2%;--s:52px;--d:3.42s;--dx:2px;--dy:3px;--dur:20s"><img src="assets/tool-icons/mailchimp.svg?v=c3" alt="" width="52" height="52"></span><span class="tool-cloud-node" style="left:94.3%;top:67.0%;--s:46px;--d:3.8s;--dx:3px;--dy:4px;--dur:22s"><img src="assets/tool-icons/wordpress.svg?v=c3" alt="" width="46" height="46"></span><span class="tool-cloud-node" style="left:89.9%;top:75.1%;--s:54px;--d:4.18s;--dx:4px;--dy:2px;--dur:24s"><img src="assets/tool-icons/heroku.svg?v=c3" alt="" width="54" height="54"></span><span class="tool-cloud-node" style="left:83.9%;top:82.2%;--s:48px;--d:4.56s;--dx:2px;--dy:3px;--dur:18s"><img src="assets/tool-icons/slack.svg?v=c3" alt="" width="48" height="48"></span><span class="tool-cloud-node" style="left:76.7%;top:88.1%;--s:56px;--d:4.94s;--dx:3px;--dy:4px;--dur:20s"><img src="assets/tool-icons/dropbox.svg?v=c3" alt="" width="56" height="56"></span><span class="tool-cloud-node" style="left:68.4%;top:92.4%;--s:44px;--d:5.32s;--dx:4px;--dy:2px;--dur:22s"><img src="assets/tool-icons/lucidchart.svg?v=c3" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:59.4%;top:94.0%;--s:52px;--d:5.7s;--dx:2px;--dy:3px;--dur:24s"><img src="assets/tool-icons/zoho.svg?v=c3" alt="" width="52" height="52"></span><span class="tool-cloud-node" style="left:50.0%;top:94.0%;--s:46px;--d:6.08s;--dx:3px;--dy:4px;--dur:18s"><img src="assets/tool-icons/hootsuite.svg?v=c3" alt="" width="46" height="46"></span><span class="tool-cloud-node" style="left:40.6%;top:94.0%;--s:54px;--d:6.46s;--dx:4px;--dy:2px;--dur:20s"><img src="assets/tool-icons/adobe.svg?v=c3" alt="" width="54" height="54"></span><span class="tool-cloud-node" style="left:31.6%;top:92.4%;--s:48px;--d:6.84s;--dx:2px;--dy:3px;--dur:22s"><img src="assets/tool-icons/quickbooks.svg?v=c3" alt="" width="48" height="48"></span><span class="tool-cloud-node" style="left:23.3%;top:88.1%;--s:56px;--d:7.22s;--dx:3px;--dy:4px;--dur:24s"><img src="assets/tool-icons/linkedin.svg?v=c3" alt="" width="56" height="56"></span><span class="tool-cloud-node" style="left:16.1%;top:82.2%;--s:44px;--d:7.6s;--dx:4px;--dy:2px;--dur:18s"><img src="assets/tool-icons/mycase.png?v=c3" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:10.1%;top:75.1%;--s:52px;--d:7.98s;--dx:2px;--dy:3px;--dur:20s"><img src="assets/tool-icons/callrail.png?v=c3" alt="" width="52" height="52"></span><span class="tool-cloud-node" style="left:5.7%;top:67.0%;--s:46px;--d:8.36s;--dx:3px;--dy:4px;--dur:22s"><img src="assets/tool-icons/kapost.png?v=c3" alt="" width="46" height="46"></span><span class="tool-cloud-node" style="left:4.8%;top:58.2%;--s:54px;--d:8.74s;--dx:4px;--dy:2px;--dur:24s"><img src="assets/tool-icons/mavenlink.png?v=c3" alt="" width="54" height="54"></span><span class="tool-cloud-node" style="left:4.8%;top:49.0%;--s:48px;--d:9.12s;--dx:2px;--dy:3px;--dur:18s"><img src="assets/tool-icons/smartsheet.png?v=c3" alt="" width="48" height="48"></span><span class="tool-cloud-node" style="left:4.8%;top:39.8%;--s:56px;--d:9.5s;--dx:3px;--dy:4px;--dur:20s"><img src="assets/tool-icons/brightedge.png?v=c3" alt="" width="56" height="56"></span><span class="tool-cloud-node" style="left:5.7%;top:31.0%;--s:44px;--d:9.88s;--dx:4px;--dy:2px;--dur:22s"><img src="assets/tool-icons/google-g.png?v=c3" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:10.1%;top:22.9%;--s:52px;--d:10.26s;--dx:2px;--dy:3px;--dur:24s"><img src="assets/tool-icons/claude.png?v=c3" alt="" width="52" height="52"></span><span class="tool-cloud-node" style="left:16.1%;top:15.8%;--s:46px;--d:10.64s;--dx:3px;--dy:4px;--dur:18s"><img src="assets/tool-icons/chatgpt.png?v=c3" alt="" width="46" height="46"></span><span class="tool-cloud-node" style="left:23.3%;top:9.9%;--s:54px;--d:11.02s;--dx:4px;--dy:2px;--dur:20s"><img src="assets/tool-icons/gemini.png?v=c3" alt="" width="54" height="54"></span><span class="tool-cloud-node" style="left:31.6%;top:5.6%;--s:48px;--d:11.4s;--dx:2px;--dy:3px;--dur:22s"><img src="assets/tool-icons/googletagmanager.svg?v=c3" alt="" width="48" height="48"></span><span class="tool-cloud-node" style="left:40.6%;top:5.5%;--s:56px;--d:11.78s;--dx:3px;--dy:4px;--dur:24s"><img src="assets/tool-icons/todoist.svg?v=c3" alt="" width="56" height="56"></span></div>
+</section> <section id="manifesto" class="relative bg-[#0B1C14] overflow-hidden"> <div class="tool-cloud" aria-hidden="true">
+<svg class="tool-cloud-net" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none"><ellipse cx="50" cy="48" rx="46.6" ry="42.2"/><ellipse class="tool-cloud-net-inner" cx="50" cy="48" rx="31.2" ry="27.6"/></svg>
+<div class="tool-cloud-nodes"><span class="tool-cloud-node" style="left:50.0%;top:5.8%;--s:50px;--d:0.0s;--dx:2px;--dy:3px;--dur:18s"><img src="assets/tool-icons/salesforce.svg?v=ring1" alt="" width="50" height="50"></span><span class="tool-cloud-node" style="left:59.69%;top:6.72%;--s:44px;--d:0.38s;--dx:3px;--dy:4px;--dur:20s"><img src="assets/tool-icons/hubspot.svg?v=ring1" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:68.95%;top:9.45%;--s:50px;--d:0.76s;--dx:4px;--dy:2px;--dur:22s"><img src="assets/tool-icons/clickup.svg?v=ring1" alt="" width="50" height="50"></span><span class="tool-cloud-node" style="left:77.39%;top:13.86%;--s:44px;--d:1.14s;--dx:2px;--dy:3px;--dur:24s"><img src="assets/tool-icons/marketo.svg?v=ring1" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:84.63%;top:19.76%;--s:50px;--d:1.52s;--dx:3px;--dy:4px;--dur:18s"><img src="assets/tool-icons/pardot.svg?v=ring1" alt="" width="50" height="50"></span><span class="tool-cloud-node" style="left:90.36%;top:26.9%;--s:44px;--d:1.9s;--dx:4px;--dy:2px;--dur:20s"><img src="assets/tool-icons/eloqua.png?v=ring1" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:94.32%;top:34.96%;--s:50px;--d:2.28s;--dx:2px;--dy:3px;--dur:22s"><img src="assets/tool-icons/googleanalytics.svg?v=ring1" alt="" width="50" height="50"></span><span class="tool-cloud-node" style="left:96.34%;top:43.59%;--s:44px;--d:2.66s;--dx:3px;--dy:4px;--dur:24s"><img src="assets/tool-icons/googleads.svg?v=ring1" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:96.34%;top:52.41%;--s:50px;--d:3.04s;--dx:4px;--dy:2px;--dur:18s"><img src="assets/tool-icons/meta.svg?v=ring1" alt="" width="50" height="50"></span><span class="tool-cloud-node" style="left:94.32%;top:61.04%;--s:44px;--d:3.42s;--dx:2px;--dy:3px;--dur:20s"><img src="assets/tool-icons/microsoftads.png?v=ring1" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:90.36%;top:69.1%;--s:50px;--d:3.8s;--dx:3px;--dy:4px;--dur:22s"><img src="assets/tool-icons/mailchimp.svg?v=ring1" alt="" width="50" height="50"></span><span class="tool-cloud-node tool-cloud-node--glow" style="left:84.63%;top:76.24%;--s:44px;--d:4.18s;--dx:4px;--dy:2px;--dur:24s"><img src="assets/tool-icons/wordpress.svg?v=ring1" alt="" width="44" height="44"></span><span class="tool-cloud-node tool-cloud-node--glow" style="left:77.39%;top:82.14%;--s:50px;--d:4.56s;--dx:2px;--dy:3px;--dur:18s"><img src="assets/tool-icons/heroku.svg?v=ring1" alt="" width="50" height="50"></span><span class="tool-cloud-node tool-cloud-node--glow" style="left:68.95%;top:86.55%;--s:44px;--d:4.94s;--dx:3px;--dy:4px;--dur:20s"><img src="assets/tool-icons/slack.svg?v=ring1" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:59.69%;top:89.28%;--s:50px;--d:5.32s;--dx:4px;--dy:2px;--dur:22s"><img src="assets/tool-icons/dropbox.svg?v=ring1" alt="" width="50" height="50"></span><span class="tool-cloud-node" style="left:50.0%;top:90.2%;--s:44px;--d:5.7s;--dx:2px;--dy:3px;--dur:24s"><img src="assets/tool-icons/zoho.svg?v=ring1" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:40.31%;top:89.28%;--s:50px;--d:6.08s;--dx:3px;--dy:4px;--dur:18s"><img src="assets/tool-icons/hootsuite.svg?v=ring1" alt="" width="50" height="50"></span><span class="tool-cloud-node" style="left:31.05%;top:86.55%;--s:44px;--d:6.46s;--dx:4px;--dy:2px;--dur:20s"><img src="assets/tool-icons/adobe.svg?v=ring1" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:22.61%;top:82.14%;--s:50px;--d:6.84s;--dx:2px;--dy:3px;--dur:22s"><img src="assets/tool-icons/quickbooks.svg?v=ring1" alt="" width="50" height="50"></span><span class="tool-cloud-node tool-cloud-node--glow" style="left:15.37%;top:76.24%;--s:44px;--d:7.22s;--dx:3px;--dy:4px;--dur:24s"><img src="assets/tool-icons/linkedin.svg?v=ring1" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:9.64%;top:69.1%;--s:50px;--d:7.6s;--dx:4px;--dy:2px;--dur:18s"><img src="assets/tool-icons/mycase.png?v=ring1" alt="" width="50" height="50"></span><span class="tool-cloud-node" style="left:5.68%;top:61.04%;--s:44px;--d:7.98s;--dx:2px;--dy:3px;--dur:20s"><img src="assets/tool-icons/callrail.png?v=ring1" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:3.66%;top:52.41%;--s:50px;--d:8.36s;--dx:3px;--dy:4px;--dur:22s"><img src="assets/tool-icons/kapost.png?v=ring1" alt="" width="50" height="50"></span><span class="tool-cloud-node" style="left:3.66%;top:43.59%;--s:44px;--d:8.74s;--dx:4px;--dy:2px;--dur:24s"><img src="assets/tool-icons/mavenlink.png?v=ring1" alt="" width="44" height="44"></span><span class="tool-cloud-node tool-cloud-node--glow" style="left:5.68%;top:34.96%;--s:50px;--d:9.12s;--dx:2px;--dy:3px;--dur:18s"><img src="assets/tool-icons/smartsheet.png?v=ring1" alt="" width="50" height="50"></span><span class="tool-cloud-node tool-cloud-node--glow" style="left:9.64%;top:26.9%;--s:44px;--d:9.5s;--dx:3px;--dy:4px;--dur:20s"><img src="assets/tool-icons/brightedge.png?v=ring1" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:15.37%;top:19.76%;--s:50px;--d:9.88s;--dx:4px;--dy:2px;--dur:22s"><img src="assets/tool-icons/google-color.svg?v=ring1" alt="" width="50" height="50"></span><span class="tool-cloud-node" style="left:22.61%;top:13.86%;--s:44px;--d:10.26s;--dx:2px;--dy:3px;--dur:24s"><img src="assets/tool-icons/github.svg?v=ring1" alt="" width="44" height="44"></span><span class="tool-cloud-node" style="left:31.05%;top:9.45%;--s:50px;--d:10.64s;--dx:3px;--dy:4px;--dur:18s"><img src="assets/tool-icons/zapier.svg?v=ring1" alt="" width="50" height="50"></span><span class="tool-cloud-node" style="left:40.31%;top:6.72%;--s:44px;--d:11.02s;--dx:4px;--dy:2px;--dur:20s"><img src="assets/tool-icons/squarespace.svg?v=ring1" alt="" width="44" height="44"></span><span class="tool-cloud-node tool-cloud-node--inner tool-cloud-node--glow" style="left:54.65%;top:20.71%;--s:32px;--d:0.0s;--dx:2px;--dy:3px;--dur:18s"><img src="assets/tool-icons/trello.svg?v=ring1" alt="" width="32" height="32"></span><span class="tool-cloud-node tool-cloud-node--inner" style="left:63.54%;top:23.13%;--s:28px;--d:0.38s;--dx:3px;--dy:4px;--dur:20s"><img src="assets/tool-icons/monday.png?v=ring1" alt="" width="28" height="28"></span><span class="tool-cloud-node tool-cloud-node--inner" style="left:71.22%;top:27.77%;--s:32px;--d:0.76s;--dx:4px;--dy:2px;--dur:22s"><img src="assets/tool-icons/lsa.png?v=ring1" alt="" width="32" height="32"></span><span class="tool-cloud-node tool-cloud-node--inner" style="left:77.02%;top:34.2%;--s:28px;--d:1.14s;--dx:2px;--dy:3px;--dur:24s"><img src="assets/tool-icons/cursor.svg?v=ring1" alt="" width="28" height="28"></span><span class="tool-cloud-node tool-cloud-node--inner" style="left:80.42%;top:41.86%;--s:32px;--d:1.52s;--dx:3px;--dy:4px;--dur:18s"><img src="assets/tool-icons/lucidchart.svg?v=ring1" alt="" width="32" height="32"></span><span class="tool-cloud-node tool-cloud-node--inner tool-cloud-node--glow" style="left:81.11%;top:50.06%;--s:28px;--d:1.9s;--dx:4px;--dy:2px;--dur:20s"><img src="assets/tool-icons/miro.svg?v=ring1" alt="" width="28" height="28"></span><span class="tool-cloud-node tool-cloud-node--inner tool-cloud-node--glow" style="left:79.04%;top:58.08%;--s:32px;--d:2.28s;--dx:2px;--dy:3px;--dur:22s"><img src="assets/tool-icons/canva.svg?v=ring1" alt="" width="32" height="32"></span><span class="tool-cloud-node tool-cloud-node--inner" style="left:74.39%;top:65.21%;--s:28px;--d:2.66s;--dx:3px;--dy:4px;--dur:24s"><img src="assets/tool-icons/feedly.svg?v=ring1" alt="" width="28" height="28"></span><span class="tool-cloud-node tool-cloud-node--inner" style="left:67.58%;top:70.8%;--s:32px;--d:3.04s;--dx:4px;--dy:2px;--dur:18s"><img src="assets/tool-icons/x.svg?v=ring1" alt="" width="32" height="32"></span><span class="tool-cloud-node tool-cloud-node--inner" style="left:59.2%;top:74.37%;--s:28px;--d:3.42s;--dx:2px;--dy:3px;--dur:20s"><img src="assets/tool-icons/html5.svg?v=ring1" alt="" width="28" height="28"></span><span class="tool-cloud-node tool-cloud-node--inner" style="left:50.0%;top:75.6%;--s:32px;--d:3.8s;--dx:3px;--dy:4px;--dur:22s"><img src="assets/tool-icons/bluehost.png?v=ring1" alt="" width="32" height="32"></span><span class="tool-cloud-node tool-cloud-node--inner tool-cloud-node--glow" style="left:40.8%;top:74.37%;--s:28px;--d:4.18s;--dx:4px;--dy:2px;--dur:24s"><img src="assets/tool-icons/microsoftexcel.svg?v=ring1" alt="" width="28" height="28"></span><span class="tool-cloud-node tool-cloud-node--inner tool-cloud-node--glow" style="left:32.42%;top:70.8%;--s:32px;--d:4.56s;--dx:2px;--dy:3px;--dur:18s"><img src="assets/tool-icons/highspot.png?v=ring1" alt="" width="32" height="32"></span><span class="tool-cloud-node tool-cloud-node--inner" style="left:25.61%;top:65.21%;--s:28px;--d:4.94s;--dx:3px;--dy:4px;--dur:20s"><img src="assets/tool-icons/widen.png?v=ring1" alt="" width="28" height="28"></span><span class="tool-cloud-node tool-cloud-node--inner" style="left:20.96%;top:58.08%;--s:32px;--d:5.32s;--dx:4px;--dy:2px;--dur:22s"><img src="assets/tool-icons/vidyard.png?v=ring1" alt="" width="32" height="32"></span><span class="tool-cloud-node tool-cloud-node--inner" style="left:18.89%;top:50.06%;--s:28px;--d:5.7s;--dx:2px;--dy:3px;--dur:24s"><img src="assets/tool-icons/allocadia.png?v=ring1" alt="" width="28" height="28"></span><span class="tool-cloud-node tool-cloud-node--inner tool-cloud-node--glow" style="left:19.58%;top:41.86%;--s:32px;--d:6.08s;--dx:3px;--dy:4px;--dur:18s"><img src="assets/tool-icons/postbeyond.png?v=ring1" alt="" width="32" height="32"></span><span class="tool-cloud-node tool-cloud-node--inner" style="left:22.98%;top:34.2%;--s:28px;--d:6.46s;--dx:4px;--dy:2px;--dur:20s"><img src="assets/tool-icons/zift.png?v=ring1" alt="" width="28" height="28"></span><span class="tool-cloud-node tool-cloud-node--inner" style="left:28.78%;top:27.77%;--s:32px;--d:6.84s;--dx:2px;--dy:3px;--dur:22s"><img src="assets/tool-icons/smartlogic.png?v=ring1" alt="" width="32" height="32"></span><span class="tool-cloud-node tool-cloud-node--inner" style="left:36.46%;top:23.13%;--s:28px;--d:7.22s;--dx:3px;--dy:4px;--dur:24s"><img src="assets/tool-icons/smarp.svg?v=ring1" alt="" width="28" height="28"></span><span class="tool-cloud-node tool-cloud-node--inner tool-cloud-node--glow" style="left:45.35%;top:20.71%;--s:32px;--d:7.6s;--dx:4px;--dy:2px;--dur:18s"><img src="assets/tool-icons/tableau.svg?v=ring1" alt="" width="32" height="32"></span></div>
 <div class="tool-cloud-veil"></div>
-</div> <!-- Centered foreground content --> <div class="relative z-10 max-w-screen-xl mx-auto px-6 md:px-12"> <div class="max-w-2xl mx-auto text-center"> <!-- Label --> <div class="reveal mb-10"> <span class="inline-flex items-center gap-3 text-[#A3B8A8] text-xs font-mono tracking-[0.3em] uppercase"> <span class="w-6 h-[1px] bg-[#A3B8A8] inline-block" aria-hidden="true"></span>
+</div> <div class="tool-copy"> <div class="reveal mb-5"> <span class="inline-flex items-center gap-3 text-[#A3B8A8] text-xs font-mono tracking-[0.3em] uppercase"> <span class="w-6 h-[1px] bg-[#A3B8A8] inline-block" aria-hidden="true"></span>
 004 / Tools
-<span class="w-6 h-[1px] bg-[#A3B8A8] inline-block" aria-hidden="true"></span> </span> </div> <!-- Manifesto headline --> <h2 class="reveal reveal-delay-1 font-serif text-[clamp(2rem,5vw,3.5rem)] text-[#F4F1EB] leading-[1.05] tracking-tight mb-8">
-Marketing Technology<br>
-&amp; <em>Operations.</em> </h2> <!-- Hairline divider --> <div class="reveal reveal-delay-2 w-16 h-[1px] bg-[#F4F1EB]/30 mx-auto mb-8" aria-hidden="true"></div> <!-- Manifesto paragraph --> <p class="reveal reveal-delay-3 text-[#A3B8A8] text-lg leading-relaxed">
-Marketing technology is a working interest: CRM, campaign ops, ads, analytics, and the tools between them. Expertise here is knowing the stack well enough to choose, connect, and pick up whatever comes next.
-</p> </div> </div> </section> <section id="resume">
+<span class="w-6 h-[1px] bg-[#A3B8A8] inline-block" aria-hidden="true"></span> </span> </div> <!-- Manifesto headline --> <h2 class="reveal reveal-delay-1 font-serif text-[clamp(2rem,5vw,3.5rem)] text-[#F4F1EB] leading-[1.05] tracking-tight mb-4">
+Marketing Technology. </h2> <div class="reveal reveal-delay-2 w-16 h-[1px] bg-[#F4F1EB]/30 mx-auto mb-4" aria-hidden="true"></div> <!-- Manifesto paragraph --> <p class="reveal reveal-delay-3 text-[#A3B8A8] text-lg leading-relaxed">
+Marketing technology is an ever growing and changing ecosystem. Expertise is knowing what the right tool is for the job.
+</p> </div> </section> <section id="resume">
   <div class="resume-inner">
-    <div class="reveal mb-10">
+    <div class="reveal mb-10 resume-head">
+      <div>
       <span class="text-[#A3B8A8] text-xs font-mono tracking-[0.3em] uppercase">005 / Resume</span>
       <h2 class="font-serif text-[clamp(2.5rem,6vw,5rem)] text-[#F4F1EB] leading-[0.9] tracking-tighter mt-4">Resume</h2>
+      </div>
+      <details class="print-resume resume-dl">
+        <summary>Download</summary>
+        <div class="print-resume-menu">
+          <a href="Kate-Stannard-Resume-1-page.pdf" download>Short Resume</a>
+          <a href="Kate-Stannard-Resume-2-page.pdf" download>Detailed Resume</a>
+        </div>
+      </details>
     </div>
     <div class="resume-copy">
 <h1>Kate Stannard</h1>
@@ -282,28 +331,9 @@ Marketing technology is a working interest: CRM, campaign ops, ads, analytics, a
       Senior Marketing Technology and Marketing Operations leader with experience from enterprise corporations to growth stage companies. Owns CRM, lifecycle systems, integrations, attribution, and vendor selection so acquisition and lifecycle stay measurable, privacy-aware, and ready to iterate. Uses AI to expand skills and accelerate implementation, not as a substitute for creativity, experience, or critical thought.
     </p>
 
-    <h2>Tool Proficiencies</h2>
     <div class="tools">
-      <h3>CRM and practice systems</h3>
-      <p>Salesforce CRM · HubSpot · MyCase · Salesforce Marketing Cloud · Einstein Analytics · Zoho</p>
-      <h3>Marketing automation and content</h3>
-      <p>Marketo · Eloqua · Pardot · Kapost · Mailchimp · HighSpot · Widen · SmartLogic · VidYard · PostBeyond · SMARP · Zift123</p>
-      <h3>Analytics and attribution</h3>
-      <p>Google Analytics / GA4 · CallRail · BrightEdge</p>
-      <h3>Paid media</h3>
-      <p>Google Ads · Local Services Ads · Meta · Microsoft Advertising · LinkedIn Ads · Twitter Ads</p>
-      <h3>Work management and planning</h3>
-      <p>ClickUp · Mavenlink · Smartsheet · Allocadia · GUS · Trello · Monday.com · Zapier</p>
-      <h3>Web and hosting</h3>
-      <p>WordPress · BlueHost · Squarespace · HTML</p>
-      <h3>Platforms and AI builds</h3>
-      <p>Heroku · GitHub · Cursor · QuickBooks</p>
-      <h3>Design and diagramming</h3>
-      <p>Lucidchart · Miro · Adobe Photoshop · Adobe Illustrator · Canva</p>
-      <h3>Social</h3>
-      <p>Hootsuite · Feedly</p>
-      <h3>Everyday collaboration</h3>
-      <p>Slack · Google Workspace · Microsoft Suite · Excel VBA · Dropbox · Give me a tool and I can learn it.</p>
+      <h2>Tool Proficiencies</h2>
+      <p>Salesforce CRM · HubSpot · MyCase · Salesforce Marketing Cloud · Einstein Analytics · Zoho; Marketo · Eloqua · Pardot · Kapost · Mailchimp · HighSpot · Widen · SmartLogic · VidYard · PostBeyond · SMARP · Zift123; Google Analytics / GA4 · CallRail · BrightEdge; Google Ads · Local Services Ads · Meta · Microsoft Advertising · LinkedIn Ads · Twitter Ads; ClickUp · Mavenlink · Smartsheet · Allocadia · GUS · Trello · Monday.com · Zapier; WordPress · BlueHost · Squarespace · HTML; Heroku · GitHub · Cursor · QuickBooks; Lucidchart · Miro · Adobe Photoshop · Adobe Illustrator · Canva; Hootsuite · Feedly; Slack · Google Workspace · Microsoft Suite · Excel VBA · Dropbox · Give me a tool and I can learn it.</p>
       <h3>Certifications</h3>
       <p>2020 Trailhead Ranger · 2016 / 2014 Eloqua Master · 2016 / 2015 BrightEdge Master · 2015 Hootsuite Certified Professional</p>
     </div>
@@ -319,15 +349,6 @@ Marketing technology is a working interest: CRM, campaign ops, ads, analytics, a
   <ul>
     <li>Recent client successes: new cases ↑ ~87% YoY; lead volume more than doubled; Search cost per call ↓ ~61%</li>
   </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-head">
-        <span>Lazy Goose Acres · Founder Farmer <span class="job-loc">· Colorado</span></span>
-        <span class="job-dates">Apr 2024 – Present</span>
-      </div>
-      <p class="role-blurb">A Colorado farm retreat and camping business: a place for people to stay on working land, with on-property experiences.</p>
-
     </div>
 
     <div class="job">
@@ -581,7 +602,19 @@ Let's Get Connected
         }
 
         #manifesto {
-          min-height: max(92vh, 780px);
+          min-height: 640px;
+          padding: 3.25rem 1.25rem 3.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .tool-copy {
+          position: relative;
+          z-index: 10;
+          text-align: center;
+          max-width: 42rem;
+          margin: 0 auto;
+          padding: 0 1rem;
         }
         .tool-cloud {
           position: absolute;
@@ -601,11 +634,13 @@ Let's Get Connected
           stroke-dasharray: 1.2 1.8;
           animation: tool-net-dash 48s linear infinite;
         }
+        .tool-cloud-net-inner {
+          stroke-opacity: 0.2;
+          stroke-width: 0.14;
+        }
         .tool-cloud-nodes {
           position: absolute;
           inset: 0;
-          -webkit-mask-image: radial-gradient(ellipse 50% 46% at 50% 46%, transparent 0%, transparent 40%, #000 58%, #000 100%);
-          mask-image: radial-gradient(ellipse 50% 46% at 50% 46%, transparent 0%, transparent 40%, #000 58%, #000 100%);
         }
         .tool-cloud-node {
           position: absolute;
@@ -626,10 +661,24 @@ Let's Get Connected
           opacity: 1;
           filter: brightness(1.2) saturate(1.15) drop-shadow(0 1px 4px rgba(244, 241, 235, 0.25));
         }
+        .tool-cloud-node--glow::before {
+          content: "";
+          position: absolute;
+          inset: -22%;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(255,255,255,0.92) 0%, rgba(244,241,235,0.55) 40%, rgba(244,241,235,0.12) 62%, transparent 74%);
+          pointer-events: none;
+          z-index: 0;
+        }
+        .tool-cloud-node--glow img {
+          position: relative;
+          z-index: 1;
+          filter: brightness(1.12) saturate(1.08) drop-shadow(0 0 4px rgba(255,255,255,0.55));
+        }
         .tool-cloud-veil {
           position: absolute;
           inset: 0;
-          background: radial-gradient(ellipse 42% 38% at 50% 46%, #0B1C14 72%, rgba(11, 28, 20, 0.88) 90%, transparent 100%);
+          background: radial-gradient(ellipse 22% 20% at 50% 48%, #0B1C14 70%, rgba(11, 28, 20, 0.82) 88%, transparent 100%);
         }
         @keyframes tool-cloud-drift {
           from { transform: translate(0, 0); }
@@ -641,13 +690,15 @@ Let's Get Connected
 
 
         @media (max-width: 900px) {
-          .tool-cloud-node:nth-child(even) { display: none; }
-          .tool-cloud-node { --s: 40px !important; }
+          .tool-cloud-node--inner { display: none; }
+          .tool-cloud-node { --s: 38px !important; }
+          #manifesto { min-height: 520px; }
         }
         @media (max-width: 700px) {
           .tool-cloud { display: none; }
+          #manifesto { min-height: 0; padding: 3rem 1.25rem; }
         }
-        /* Reduced Motion Support */
+                /* Reduced Motion Support */
         @media (prefers-reduced-motion: reduce) {
           .reveal,
           .reveal-left,
@@ -757,6 +808,7 @@ Let's Get Connected
           var bodyEl = document.getElementById('works-lp-body');
           var linkEl = document.getElementById('works-lp-link');
           var photoWrap = img ? img.closest('.work-photo') : null;
+          var current = 0;
           var items = [
             {
               kind: 'Lead Generation',
@@ -770,7 +822,7 @@ Let's Get Connected
             },
             {
               kind: 'MarTech: Attribution',
-              title: '1.3 Billion Recovered',
+              title: 'Automating Campaign Creation & Audit',
               body: 'Automated Global Campaign Audit that prepopulated records, ran workflows, and flagged corrections for hundreds of stakeholders. Year one recovered $1.3B in Marketing Pipe and cut manual data-entry errors ~70%.',
               href: '#works',
               img: 'assets/works/campaign-audit.jpg',
@@ -780,9 +832,9 @@ Let's Get Connected
             },
             {
               kind: 'Training',
-              title: 'Presenter at Industry Conference',
+              title: 'LevelUp Presenter for ClickUp & Salesforce',
               body: 'Taught a training workshop at ClickUp\'s Level Up event. Live instruction for operators on merging people, process, and systems, not a slide walkthrough of one integration.',
-              href: 'https://www.youtube.com/watch?v=Ok0SnFfD7Xs',
+              href: 'levelup.html',
               img: 'assets/works/clickup-talk.jpg?v=slide2',
               alt: 'Kate presenting a training workshop at ClickUp Level Up',
               dash: false,
@@ -793,6 +845,7 @@ Let's Get Connected
           function select(i) {
             var item = items[i];
             if (!item) return;
+            current = i;
             buttons.forEach(function (btn, idx) {
               btn.setAttribute('aria-selected', idx === i ? 'true' : 'false');
             });
@@ -810,7 +863,7 @@ Let's Get Connected
               linkEl.href = item.href;
               if (item.external) {
                 linkEl.setAttribute('target', '_blank');
-                linkEl.setAttribute('rel', 'noopener noreferrer');
+                linkEl.setAttribute('rel', 'noopener');
               } else {
                 linkEl.removeAttribute('target');
                 linkEl.removeAttribute('rel');
@@ -838,6 +891,12 @@ Let's Get Connected
               }
             });
           });
+          var outEl = root.querySelector('.works-lp-out');
+          if (outEl) {
+            outEl.addEventListener('click', function () {
+              select(2);
+            });
+          }
         })();
       </script> <!-- Scroll Reveal Script --> <script>
         const revealObserver = new IntersectionObserver(
